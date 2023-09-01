@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include "MorseCode.h"
 
-// Function to convert a character to its Morse code representation
 const char* charToMorse(char c) {
     switch (c) {
         case 'A': return ".-";
@@ -47,13 +45,4 @@ const char* charToMorse(char c) {
         case ')': return "-.--.-";
         default: return "";
     }
-}
-
-// Test the function
-int main() {
-    char testChars[] = "AB1,.";
-    for (int i = 0; i < strlen(testChars); i++) {
-        printf("Character: %c, Morse Code: %s\n", testChars[i], charToMorse(testChars[i]));
-    }
-    return 0;
 }
